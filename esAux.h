@@ -10,7 +10,7 @@
     I didn't, like esCramerInvert() was from some intel pdf
     that is no where to be found online anymore.
 
-    Like anything in life this is eclection of things that
+    Like anything in life this is an eclection of things that
     "just work" that I've scraped together over the years.
 
     The quaternion code is mostly from what Tyrone Davison
