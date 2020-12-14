@@ -12,6 +12,6 @@ a = Lambertian
 b = Phong
 
 Mouse Keys:
-Left click / touch = rotate camera
-Right click / pinch = change zoom
+Left click / touch = Rotate camera
+Right click / pinch = Change zoom
 ```
