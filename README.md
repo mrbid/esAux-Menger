@@ -15,3 +15,5 @@ Mouse Keys:
 Left click / touch = Rotate camera
 Right click / pinch = Change zoom
 ```
+
+This is the same engine used to create [Snowball.mobi](https://snowball.mobi)
