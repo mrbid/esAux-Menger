@@ -80,7 +80,6 @@ int main(int argc, char** argv)
         char line[256];
         while(fgets(line, 256, f) != NULL)
         {
-            //printf("%s\n",line);
             if(strcmp(line, "end_header\n") == 0)
             {
                 mode = 1;
