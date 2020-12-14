@@ -10,4 +10,8 @@ z = Solid / Opaque
 x = Half Translucent
 a = Lambertian
 b = Phong
+
+Mouse Keys:
+Left click / touch = rotate camera
+Right click / pinch = change zoom
 ```
