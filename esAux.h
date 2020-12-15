@@ -1040,7 +1040,7 @@ const GLchar* v21 =
         "vertCol = color;\n"
         "vertOpa = opacity;\n"
         "vlightPos = lightpos;\n"
-        "normalInterp = vec3(normalmat * vec4(position.xyz, 0.0));"
+        "normalInterp = vec3(normalmat * vec4(normal.xyz, 0.0));"
         "gl_Position = projection * modelview * position;"
     "}\n";
 
