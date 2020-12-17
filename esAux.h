@@ -680,7 +680,6 @@ void esSetDirection(ESMatrix *result, const ESVector dir_norm, const ESVector up
     result->m[2][2] = dir_norm.z;
 }
 
-
 void esGetDirectionX(ESVector *result, const ESMatrix matrix)
 {
     result->x = matrix.m[0][0];
