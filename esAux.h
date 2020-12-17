@@ -122,6 +122,10 @@ void esCramerInvert(GLfloat *dst, const GLfloat *mat);
 void esTranspose(ESMatrix *r, const ESMatrix* m);
 void esSetDirection(ESMatrix *result, const ESVector dir_norm, const ESVector up_norm);
 void esGetDirection(ESVector *result, const ESMatrix matrix);
+void esGetDirectionX(ESVector *result, const ESMatrix matrix);
+void esGetDirectionY(ESVector *result, const ESMatrix matrix);
+void esGetDirectionZ(ESVector *result, const ESMatrix matrix);
+void esGetViewDirection(ESVector *result, const ESMatrix matrix);
 
 // utility functions
 GLfloat esRandFloat(const GLfloat min, const GLfloat max);
@@ -676,11 +680,41 @@ void esSetDirection(ESMatrix *result, const ESVector dir_norm, const ESVector up
     result->m[2][2] = dir_norm.z;
 }
 
-void esGetDirection(ESVector *result, const ESMatrix matrix)
+
+void esGetDirectionX(ESVector *result, const ESMatrix matrix)
+{
+    result->x = matrix.m[0][0];
+    result->y = matrix.m[0][1];
+    result->z = matrix.m[0][2];
+}
+
+void esGetDirectionY(ESVector *result, const ESMatrix matrix)
 {
     result->x = matrix.m[1][0];
     result->y = matrix.m[1][1];
     result->z = matrix.m[1][2];
+}
+
+
+void esGetDirectionZ(ESVector *result, const ESMatrix matrix)
+{
+    result->x = matrix.m[2][0];
+    result->y = matrix.m[2][1];
+    result->z = matrix.m[2][2];
+}
+
+void esGetDirection(ESVector *result, const ESMatrix matrix)
+{
+    result->x = matrix.m[2][0];
+    result->y = matrix.m[2][1];
+    result->z = matrix.m[2][2];
+}
+
+void esGetViewDirection(ESVector *result, const ESMatrix matrix)
+{
+    result->x = -matrix.m[0][2];
+    result->y = -matrix.m[1][2];
+    result->z = -matrix.m[2][2];
 }
 
 ///
