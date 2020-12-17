@@ -694,7 +694,6 @@ void esGetDirectionY(ESVector *result, const ESMatrix matrix)
     result->z = matrix.m[1][2];
 }
 
-
 void esGetDirectionZ(ESVector *result, const ESMatrix matrix)
 {
     result->x = matrix.m[2][0];
