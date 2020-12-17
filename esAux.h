@@ -68,10 +68,10 @@ typedef struct
 
 typedef struct
 {
-    GLuint vid;
-    GLuint iid;
-    GLuint cid;
-    GLuint nid;
+    GLuint vid; // Vertex Array Buffer ID
+    GLuint iid;	// Index Array Buffer ID
+    GLuint cid;	// Colour Array Buffer ID
+    GLuint nid;	// Normal Array Buffer ID
 } ESModel;
 
 // defines
