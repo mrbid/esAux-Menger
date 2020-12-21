@@ -558,10 +558,10 @@ void esCramerInvert(GLfloat *dst, const GLfloat *mat)
     /* transpose matrix */
     for(int i = 0; i < 4; i++)
     {
-	    src[i] = mat[i*4];
-	    src[i + 4] = mat[i*4 + 1];
-	    src[i + 8] = mat[i*4 + 2];
-	    src[i + 12] = mat[i*4 + 3];
+        src[i] = mat[i*4];
+        src[i + 4] = mat[i*4 + 1];
+        src[i + 8] = mat[i*4 + 2];
+        src[i + 12] = mat[i*4 + 3];
     }
 
     /* calculate pairs for first 8 elements (cofactors) */
