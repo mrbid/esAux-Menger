@@ -734,30 +734,30 @@ void esBind(const GLenum target, GLuint* buffer, const void* data, const GLsizei
 // quaternion to matrix
 void qMatrix(ESMatrix* r, const ESVector q)
 {
-	float m00, m01, m02, m10, m11, m12, m20, m21, m22;
+    float m00, m01, m02, m10, m11, m12, m20, m21, m22;
 
-	const float sqw = q.w*q.w;
-	const float sqx = q.x*q.x;
-	const float sqy = q.y*q.y;
-	const float sqz = q.z*q.z;
+    const float sqw = q.w*q.w;
+    const float sqx = q.x*q.x;
+    const float sqy = q.y*q.y;
+    const float sqz = q.z*q.z;
 
-	m00 = ( sqx - sqy - sqz + sqw);
-	m11 = (-sqx + sqy - sqz + sqw);
-	m22 = (-sqx - sqy + sqz + sqw);
+    m00 = ( sqx - sqy - sqz + sqw);
+    m11 = (-sqx + sqy - sqz + sqw);
+    m22 = (-sqx - sqy + sqz + sqw);
 
-	float tmp1 = q.x*q.y;
-	float tmp2 = q.z*q.w;
-	m10 = 2.0f * (tmp1 + tmp2);
-	m01 = 2.0f * (tmp1 - tmp2);
+    float tmp1 = q.x*q.y;
+    float tmp2 = q.z*q.w;
+    m10 = 2.0f * (tmp1 + tmp2);
+    m01 = 2.0f * (tmp1 - tmp2);
 
-	tmp1 = q.x*q.z;
-	tmp2 = q.y*q.w;
-	m20 = 2.0f * (tmp1 - tmp2);
-	m02 = 2.0f * (tmp1 + tmp2);
-	tmp1 = q.y*q.z;
-	tmp2 = q.x*q.w;
-	m21 = 2.0f * (tmp1 + tmp2);
-	m12 = 2.0f * (tmp1 - tmp2);
+    tmp1 = q.x*q.z;
+    tmp2 = q.y*q.w;
+    m20 = 2.0f * (tmp1 - tmp2);
+    m02 = 2.0f * (tmp1 + tmp2);
+    tmp1 = q.y*q.z;
+    tmp2 = q.x*q.w;
+    m21 = 2.0f * (tmp1 + tmp2);
+    m12 = 2.0f * (tmp1 - tmp2);
 
     r->m[0][0] = m00;
     r->m[0][1] = m01;
@@ -780,8 +780,8 @@ void qAngle(ESVector* r, const GLfloat x, const GLfloat y, const GLfloat z, GLfl
     vn.y = y;
     vn.z = z;
     vNorm(&vn);
-	const GLfloat ha = radians * 0.5f;
-	const GLfloat sa = sin(ha);
+    const GLfloat ha = radians * 0.5f;
+    const GLfloat sa = sin(ha);
     r->w = cos(ha);
     r->x = vn.x * sa;
     r->y = vn.y * sa;
